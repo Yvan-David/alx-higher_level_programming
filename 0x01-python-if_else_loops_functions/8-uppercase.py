@@ -6,4 +6,4 @@ def uppercase(str):
         if b in range(97, 123):
             b = b - 32
         st = st + chr(b)
-    print(st)
+    print('{}'.format(st))
