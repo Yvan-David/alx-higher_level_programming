@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 if __name__ == '__main__':
-    from calculator_1 import add
-    add.a = 1
-    add.b = 2
-    print("{} + {} = {}".format(add.a, add.b, add(add.a, add.b)))
+    from calculator_1 import add as c
+    c.a = 1
+    c.b = 2
+    print("{} + {} = {}".format(c.a, c.b, c(c.a, c.b)))
