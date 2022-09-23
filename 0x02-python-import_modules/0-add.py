@@ -3,5 +3,5 @@ if __name__ == '__main__':
     import add_0 as c
     a = 1
     b = 2
-    if  (type(a)) == int and (type(b) == int): 
+    if (type(a)) == int and (type(b)) == int:
         print("{} + {} = {}".format(a, b, c.add(a, b)))
