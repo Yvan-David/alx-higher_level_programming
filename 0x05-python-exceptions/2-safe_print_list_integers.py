@@ -15,11 +15,10 @@ def safe_print_list_integers(my_list=[], x=0):
             try:
                 i + 1
                 print("{}".format(i), end='')
-                #print('')
                 n = n + 1
             except (TypeError, ValueError):
                 continue
-        print('')
+        print(''.format())
         if ((v == c) or x == 0):
             raise TypeError
     except TypeError:
