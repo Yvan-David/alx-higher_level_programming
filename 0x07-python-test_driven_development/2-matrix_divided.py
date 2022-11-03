@@ -9,7 +9,12 @@ def matrix_divided(matrix, div):
     a matrix that divides each elt
     """
     rmatrix = []
-    v = len(matrix[0])
+    try:
+        v = len(matrix[0])
+    except TypeError:
+        v = 0
+    if (v == 0):
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     for i in matrix:
         fmatrix = []
         if (type(i) == list):
