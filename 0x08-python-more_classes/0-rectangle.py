@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-class Rectangle:
+"""
+class called rectangle
+"""
+
+
+class Rectangle():
     """
     class called rectangle
     """
