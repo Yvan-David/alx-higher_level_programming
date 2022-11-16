@@ -11,3 +11,5 @@
 [-2, 3]
 >>> mylist is mylist.print_sorted
 False
+>>> print(mylist.print_sorted)
+<bound method MyList.print_sorted of [3, -2]>

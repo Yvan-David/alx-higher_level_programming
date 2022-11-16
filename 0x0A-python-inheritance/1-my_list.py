@@ -14,4 +14,4 @@ class MyList(list):
     """
         n = self.copy()
         n.sort()
-        print(n)
+        return (n)
