@@ -3,8 +3,14 @@
 module of a class
 """
 class Base():
+    """
+    class base
+    """
     __nb_objects = 0
     def __init__(self, id=None):
+        """
+        init method
+        """
         if (id is not None):
             self.id = id
         else:
