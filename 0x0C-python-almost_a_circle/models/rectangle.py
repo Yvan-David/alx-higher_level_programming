@@ -110,3 +110,12 @@ class Rectangle(Base):
         method
         """
         return (self.heigth * self.width)
+
+    def display(self):
+        """
+        method
+        """
+        for i in range(0, self.heigth):
+            for i in range(0, self.width):
+                print("#", end='')
+            print('')
