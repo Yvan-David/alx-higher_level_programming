@@ -1,1 +1,2 @@
+/*list DATABASES*/
 SHOW DATABASES;
