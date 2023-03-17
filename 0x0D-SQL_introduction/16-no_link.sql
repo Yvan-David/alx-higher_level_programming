@@ -1,4 +1,5 @@
 -- LISTING ALL with constraint of name not null
-SELECT score AND name NOT NULL
+SELECT score, name
 FROM second_table
+WHERE name <> NULL
 ORDER BY score DESC;
