@@ -1,2 +1,2 @@
 -- full table desc
-DESC first_table;
+SHOW COLUMNS FROM first_table;
