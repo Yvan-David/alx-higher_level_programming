@@ -9,7 +9,6 @@ function search () {
   for (i = 0; i < arr.length - 1; i++) {
     flag = 0;
     for (let j = 0; j < arr.length - 1; j++) {
-      console.log(arr[j])
       if (arr[j] > arr[j + 1]) {
         temp = arr[j];
         arr[j] = arr[j + 1];
@@ -21,7 +20,7 @@ function search () {
       break;
     }
   }
-  console.log(arr)
+  console.log(arr[arr.length - 2]);
 }
 if (process.argv.length <= 3) {
   console.log('0');
