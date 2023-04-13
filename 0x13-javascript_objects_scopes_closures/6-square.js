@@ -1,58 +1,46 @@
 #!/usr/bin/node
-class Rectangle
-{
-    constructor(w, h)
-    {
-        if (w <= 0 || h <= 0 || w === undefined || h === undefined)
-        {
-            return;
+class Rectangle {
+    constructor(w, h) {
+      if (w <= 0 || h <= 0 || w === undefined || h === undefined) {
+        return;
+      }
+      this.width = w;
+      this.height = h;
+    }
+    print () {
+      for (let i = 0; i < this.height; i++) {
+        for (let j = 0; j < this.width; j++) {
+            process.stdout.write("X");
         }
-        this.width = w;
-        this.height = h;
+        console.log("");
+      }
     }
-    print()
-    {
-        for(let i = 0; i < this.height; i++)
-        {
-            for(let j = 0; j < this.width; j++)
-            {
-                process.stdout.write("X");
-            }
-            console.log("");
-        }
+    rotate() {
+      let value = this.width;
+      this.width = this.height;
+      this.height = value;
     }
-    rotate()
-    {
-        let value = this.width;
-        this.width = this.height;
-        this.height = value;
-    }
-    double()
-    {
-        this.width = this.width * 2;
-        this.height = this.height * 2;
+    double () {
+      this.width = this.width * 2;
+      this.height = this.height * 2;
     }
 }
 
-class Square extends Rectangle
-{
-    constructor(size)
+class Square extends Rectangle {
+  constructor (size) {
+    super(size, size);
+  }
+  charPrint (c) {
+    if(c === undefined)
     {
-        super(size, size);
+        c = "X";
     }
-    charPrint(c)
-    {
-        if(c === undefined)
-        {
-            c = "X";
-        }
-        for(let i = 0; i < this.height; i++)
-        {
-            for(let j = 0; j < this.width; j++)
-            {
-                process.stdout.write(c);
-            }
-            console.log("");
-        }
+    for (let i = 0; i < this.height; i++) {
+      for (let j = 0; j < this.width; j++) {
+        process.stdout.write(c);
+      }
+      console.log("");
     }
+  }
 }
+module.exports = Square;
