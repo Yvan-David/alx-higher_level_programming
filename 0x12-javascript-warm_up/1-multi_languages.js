@@ -5,4 +5,3 @@ const js = 'JavaScript is amazing';
 console.log(c);
 console.log(python);
 console.log(js);
-console.log(process.argv.length);
