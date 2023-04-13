@@ -11,7 +11,6 @@ function search () {
   for (i = 2; i <= process.argv.length; i++) {
     if (parseInt(process.argv[i]) > v) {
       v = parseInt(process.argv[i]);
-      console.log(v);
       arr.push(v);
     }
   }
