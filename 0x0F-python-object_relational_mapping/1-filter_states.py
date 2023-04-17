@@ -9,7 +9,7 @@ try:
     db = MySQLdb.connect(user=sys.argv[1], password=sys.argv[2],
                          database=sys.argv[3])
     c = db.cursor()
-    c.execute(""" SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id """)
+    c.execute(""" SELECT id, name FROM states WHERE BINARY name LIKE 'N%' ORDER BY id """)
     for i in c.fetchall():
         print(i)
 except IndexError:
