@@ -9,7 +9,8 @@ try:
     db = MySQLdb.connect(user=sys.argv[1], password=sys.argv[2],
                          database=sys.argv[3])
     c = db.cursor()
-    c.execute(""" SELECT id, name FROM states WHERE BINARY name LIKE '{}' ORDER BY id """.format((sys.argv[4])))
+    c.execute(""" SELECT id, name FROM states WHERE BINARY name LIKE '{}'
+              ORDER BY id """.format((sys.argv[4])))
     for i in c.fetchall():
         print(i)
 except IndexError:
