@@ -12,6 +12,6 @@ class State(Base):
 
     __tablename__ = "states"
 
-    id = Column(INTEGER, primary_key=True, nullable=False)
+    id = Column(INTEGER, primary_key=True, nullable=False, autoincrement=True)
     UniqueConstraint(id)
     name = Column(String(128), nullable=False)
