@@ -12,7 +12,7 @@ try:
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    stats =  session.query(State).order_by(State.id).first()
+    stats = session.query(State).order_by(State.id).first()
 
     if (stats is not None):
         print(f'{stats.id}:  {stats.name}')
