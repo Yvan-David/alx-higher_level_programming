@@ -12,15 +12,20 @@ except IndexError:
     print("check your index positions please")
 
 
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1],
-                       sys.argv[2], sys.argv[3]), pool_pre_ping=True)
-Base.metadata.create_all(engine)
-Session = sessionmaker(bind=engine)
-session = Session()
-stats = session.query(State).filter(State.name == a[0])
-count = 0
-for stat in stats:
-    count = 1
-    print(f'{stat.id}')
-if count == 0:
-    print("Not found")
+try:
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
+
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    stats = session.query(State).filter(State.name == a[0])
+    count = 0
+    for stat in stats:
+        count = 1
+        print(f'{stat.id}')
+    if count == 0:
+        print("Not found")
+except IndexError:
+    print('index_error')
