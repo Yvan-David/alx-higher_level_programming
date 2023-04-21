@@ -16,5 +16,6 @@ try:
     stats = session.query(State)
     for stat in stats:
         print(f'{stat.id}:  {stat.name}')
+    session.close()
 except IndexError:
     print('index_error')

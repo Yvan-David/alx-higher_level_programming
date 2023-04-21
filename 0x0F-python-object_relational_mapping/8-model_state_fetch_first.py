@@ -12,12 +12,11 @@ try:
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    stats = session.query(State)
-    for stat in stats:
-        if (stat):
-            print(f'{stat.id}:  {stat.name}')
-            break
-        else:
-            print("Nothing")
+    stats =  session.query(State).order_by(State.id).first()
+
+    if (stats is not None):
+        print(f'{stats.id}:  {stats.name}')
+    else:
+        print("Nothing")
 except IndexError:
     print('index_error')

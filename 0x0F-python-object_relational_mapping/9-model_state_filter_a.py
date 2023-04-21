@@ -15,5 +15,6 @@ try:
     stats = session.query(State).filter(State.name.like('%a%'))
     for stat in stats:
         print(f'{stat.id}:  {stat.name}')
+    session.close()
 except IndexError:
     print('index_error')
