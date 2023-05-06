@@ -1,0 +1,1 @@
+curl -o dev/null -sw "You got me" $1 
