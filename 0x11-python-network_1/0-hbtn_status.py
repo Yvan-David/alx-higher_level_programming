@@ -6,6 +6,6 @@ if __name__ == '__main__':
          as response:
         html = response.read()
     print(f"Body response:\n\
-       - type: {type(html)}\n\
-       - content: {html}\n\
-       - utf8 content: {html.decode('UTF-8')}")
+    - type: {type(html)}\n\
+    - content: {html}\n\
+    - utf8 content: {html.decode('UTF-8')}")
