@@ -4,12 +4,12 @@
 """
 
 if __name__ == '__main__':
-    import sys
+    from sys import argv
     import urllib.request
-    dat = {"email": sys.argv[2]}
+    dat = {"email": argv[2]}
     data = urllib.parse.urlencode(dat)
     edata = data.encode('ascii')
-    req = urllib.request.Request(sys.argv[1], edata)
+    req = urllib.request.Request(argv[1], edata)
     with urllib.request.urlopen(req) as response:
         html = response.read()
         print(html.decode('utf-8'))
