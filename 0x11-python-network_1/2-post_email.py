@@ -10,11 +10,10 @@ if __name__ == "__main__":
     url = argv[1]
     email = argv[2]
     email_dict = {"email": email}
-    email_encode = urllib.parse.urlencode(email_dict)
-    email_encode = email_encode.encode('ascii')
-    request = urllib.request.Request(url, email_encode)
+    encode = urllib.parse.urlencode(email_dict)
+    encode = encode.encode('ascii')
+    request = urllib.request.Request(url, encode)
 
     with urllib.request.urlopen(request) as response:
-        page = response.read()
-        page_decode = page.decode('utf-8')
-        print(page_decode)
+        html = response.read()
+        print(html.decode('utf-8'))
